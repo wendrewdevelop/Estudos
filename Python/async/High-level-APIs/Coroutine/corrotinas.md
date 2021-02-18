@@ -1,8 +1,3 @@
-### Referencias ###
-
-https://docs.python.org/3/library/asyncio-task.html#coroutine
-
-
 ### Anotações ###
 
 Para executar uma corrotina, temos os três meios principais a seguir:
