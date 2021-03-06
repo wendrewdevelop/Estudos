@@ -1,4 +1,5 @@
 from tokens import tokens
+from pydoc import locate
 
 
 class Token(object):
@@ -31,11 +32,14 @@ class LexerError(Exception):
 
 if __name__ == "__main__":
     while True:
+        array_phrase = []
         phrase = input('Digite um charactere: ')
+        pos = phrase.index(phrase)
+        tipo = type(phrase)
 
         try:
             for k, v in tokens:
                 if k[0] in phrase:
-                    print(f'{k[0]} => {v}')
+                    print(Token(tipo, f'{k[0]} => {v}', pos))
         except LexerError as error:
             print(error)
