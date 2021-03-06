@@ -7,13 +7,14 @@ class Token(object):
         A simple Token structure.
         Contains the token type, value and position.
     """
-    def __init__(self, type, val, pos):
+    def __init__(self, type, val, line, pos):
         self.type = type
         self.val = val
+        self.line = line
         self.pos = pos
 
-    def __str__(self):
-        return '%s(%s) at %s' % (self.type, self.val, self.pos)
+    def __repr__(self):
+        return f'Token(type: {self.type}, value: {self.val!r}, line: {self.line}, position: {self.pos})'
 
 
 class LexerError(Exception):
@@ -32,14 +33,19 @@ class LexerError(Exception):
 
 if __name__ == "__main__":
     while True:
-        array_phrase = []
-        phrase = input('Digite um charactere: ')
+        phrase = input('Digite um charactere ou frase: ')
         pos = phrase.index(phrase)
         tipo = type(phrase)
+        line = phrase.count('\n')
 
         try:
             for k, v in tokens:
                 if k[0] in phrase:
-                    print(Token(tipo, f'{k[0]} => {v}', pos))
+                    print(Token(
+                        type=tipo,
+                        val=f'{k[0]} => {v}',
+                        line=line,
+                        pos=pos
+                    ))
         except LexerError as error:
             print(error)
