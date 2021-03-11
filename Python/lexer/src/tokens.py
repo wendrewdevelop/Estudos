@@ -9,7 +9,15 @@ tokens = [
     ('+', 'PLUS'),
     ('-', 'MINUS'),
     ('/', 'DIVISION'),
-    ('*', 'MULTIPLICATION'),
+    ('%', 'MODULO'),
+    ('~', 'NOT'),
+    ('=', 'EQUALS'),
+    ('<', 'LT'),
+    ('>', 'GT'),
+    ('<=', 'LTE'),
+    ('>=', 'GTE'),
+    ('==', 'DOUBLEEQUAL'),
+    ('!=', 'NE'),
 ]
 
 #tokens = [

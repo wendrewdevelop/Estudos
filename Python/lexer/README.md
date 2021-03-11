@@ -9,6 +9,8 @@
 
 - [ ] Obter uma lista de caracteres e separar caracter por caracter
 
+- [ ] Complementar a lista de tokens
+
 - [x] Implementar As classes na resposta do codigo
 
-- [ ] Implementar As classes na execução do codigo
+- [x] Implementar As classes na execução do codigo
