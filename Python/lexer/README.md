@@ -7,9 +7,9 @@
 
 ## TODO ##
 
-- [ ] Obter uma lista de caracteres e separar caracter por caracter
+- [x] Obter uma lista de caracteres e separar caracter por caracter
 
-- [ ] Complementar a lista de tokens
+- [x] Complementar a lista de tokens
 
 - [x] Implementar As classes na resposta do codigo
 
